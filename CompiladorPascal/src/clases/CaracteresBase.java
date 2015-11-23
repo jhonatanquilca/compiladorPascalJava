@@ -15,18 +15,19 @@ import java.util.Set;
  */
 public class CaracteresBase {
 
-    String[] identificadores = new String[]{"a", "b", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "\"",
-        "A", "B", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-        "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "_"};
-    String[] numeros = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."};
+    String[] alfabeto = new String[]{
+        "a", "b", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+        "A", "B", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",};
+    String[] numeros = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     String[] operadores = new String[]{"+", "-", "*", "/"};
     String[] comparadores = new String[]{"=", "!", "<", ">", "==", "!=", ">=", "<="};
     String[] separador = new String[]{","};
     String[] espacio = new String[]{" "};
-    String[] senteciaFinal = new String[]{";"};
+    String[] senteciaCirerre = new String[]{";"};
     String[] agrupadores = new String[]{"(", ")", "[", "]", "{", "}", "\""};
+    String[] senteciaFinal = new String[]{"."};
 
-    String ALFA_NUERICO = "ALFA_NUERICO";
+    String ALFABETO = "ALFABETO";
     String NUMERO = "NUMERO";
     String OPERADOR = "OPERADOR";
     String COMPARADOR = "COMPARADOR";
@@ -39,8 +40,8 @@ public class CaracteresBase {
         return c1.equals(c2);
     }
 
-    public boolean esAlfaNumerico(String c) {
-        Set<String> VALUES = new HashSet<String>(Arrays.asList(identificadores));
+    public boolean esAlfabeto(String c) {
+        Set<String> VALUES = new HashSet<String>(Arrays.asList(alfabeto));
         return VALUES.contains(c);
     }
 
@@ -70,7 +71,7 @@ public class CaracteresBase {
     }
 
     public boolean esFinal(String c) {
-        Set<String> VALUES = new HashSet<String>(Arrays.asList(senteciaFinal));
+        Set<String> VALUES = new HashSet<String>(Arrays.asList(senteciaCirerre));
         return VALUES.contains(c);
     }
 
@@ -80,8 +81,8 @@ public class CaracteresBase {
     }
 
     public String getTipo(String c) {
-        if (esAlfaNumerico(c)) {
-            return ALFA_NUERICO;
+        if (esAlfabeto(c)) {
+            return ALFABETO;
         } else if (esNumero(c)) {
             return NUMERO;
         } else if (esOperador(c)) {
@@ -102,7 +103,7 @@ public class CaracteresBase {
     }
 
     public boolean esLenguaje(String c) {
-        if (esAlfaNumerico(c)) {
+        if (esAlfabeto(c)) {
             return true;
 
         } else if (esNumero(c)) {
