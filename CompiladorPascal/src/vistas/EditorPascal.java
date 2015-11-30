@@ -7,7 +7,7 @@ package vistas;
 
 /**
  *
- * @author Administrador
+ * @author Rubén
  */
 public class EditorPascal extends javax.swing.JFrame {
 
@@ -27,23 +27,222 @@ public class EditorPascal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        btnNuevoArchivo = new javax.swing.JButton();
+        btnNuevoProyecto = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnAbrirProyecto = new javax.swing.JButton();
+        btnDeshacer = new javax.swing.JButton();
+        btnRehacer = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAreaEdicion = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
+        menBar = new javax.swing.JMenuBar();
+        MenuArchivo = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        MenuEditar = new javax.swing.JMenu();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        MenuVer = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Compilador Pascal IDE 1.0");
+
+        btnNuevoArchivo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoArchivo1.png")); // NOI18N
+
+        btnNuevoProyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoProyecto1.png")); // NOI18N
+        btnNuevoProyecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoProyectoActionPerformed(evt);
+            }
+        });
+
+        btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Guardar.png")); // NOI18N
+
+        btnAbrirProyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\AbrirProyecto1.png")); // NOI18N
+
+        btnDeshacer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Deshacer1.png")); // NOI18N
+
+        btnRehacer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Rehacer1.png")); // NOI18N
+
+        jButton1.setText("btnPlay");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(btnNuevoArchivo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNuevoProyecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnAbrirProyecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGuardar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDeshacer)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRehacer)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnNuevoArchivo)
+            .addComponent(btnNuevoProyecto)
+            .addComponent(btnGuardar)
+            .addComponent(btnAbrirProyecto)
+            .addComponent(btnDeshacer)
+            .addComponent(btnRehacer, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        txtAreaEdicion.setColumns(20);
+        txtAreaEdicion.setRows(5);
+        jScrollPane1.setViewportView(txtAreaEdicion);
+
+        jScrollPane2.setViewportView(jTree1);
+
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "TOKEN", "LEXEMA"
+            }
+        ));
+        jScrollPane3.setViewportView(tabla);
+
+        menBar.setFont(new java.awt.Font("Futura Bk BT", 0, 15)); // NOI18N
+
+        MenuArchivo.setText("Archivo");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoProyecto.png")); // NOI18N
+        jMenuItem1.setText("Nuevo Proyecto");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        MenuArchivo.add(jMenuItem1);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoArchivo.png")); // NOI18N
+        jMenuItem2.setText("Nuevo Archivo");
+        MenuArchivo.add(jMenuItem2);
+        MenuArchivo.add(jSeparator2);
+
+        jMenuItem3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\AbrirProyecto.png")); // NOI18N
+        jMenuItem3.setText("Abrir Proyecto");
+        MenuArchivo.add(jMenuItem3);
+
+        jMenuItem4.setText("Abrir Archivo");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        MenuArchivo.add(jMenuItem4);
+        MenuArchivo.add(jSeparator3);
+
+        jMenuItem7.setText("Guardar");
+        MenuArchivo.add(jMenuItem7);
+
+        jMenuItem8.setText("Gurdar Como...");
+        MenuArchivo.add(jMenuItem8);
+        MenuArchivo.add(jSeparator4);
+
+        jMenuItem9.setText("Salir");
+        MenuArchivo.add(jMenuItem9);
+
+        menBar.add(MenuArchivo);
+
+        MenuEditar.setText("Editar");
+        MenuEditar.add(jSeparator1);
+
+        jMenuItem5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Deshacer.png")); // NOI18N
+        jMenuItem5.setText("Deshacer");
+        MenuEditar.add(jMenuItem5);
+
+        jMenuItem6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Rehacer.png")); // NOI18N
+        jMenuItem6.setText("Rehacer");
+        MenuEditar.add(jMenuItem6);
+        MenuEditar.add(jSeparator5);
+
+        jMenuItem10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Borrar.png")); // NOI18N
+        jMenuItem10.setText("Borrar");
+        MenuEditar.add(jMenuItem10);
+
+        menBar.add(MenuEditar);
+
+        MenuVer.setText("Ver");
+        menBar.add(MenuVer);
+
+        setJMenuBar(menBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 933, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
+                .addGap(570, 570, 570))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:  h
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void btnNuevoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProyectoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNuevoProyectoActionPerformed
+
+    /**dhhfhhfhhffhfh
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -79,5 +278,38 @@ public class EditorPascal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu MenuArchivo;
+    private javax.swing.JMenu MenuEditar;
+    private javax.swing.JMenu MenuVer;
+    private javax.swing.JButton btnAbrirProyecto;
+    private javax.swing.JButton btnDeshacer;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnNuevoArchivo;
+    private javax.swing.JButton btnNuevoProyecto;
+    private javax.swing.JButton btnRehacer;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JTree jTree1;
+    private javax.swing.JMenuBar menBar;
+    private javax.swing.JTable tabla;
+    private javax.swing.JTextArea txtAreaEdicion;
     // End of variables declaration//GEN-END:variables
 }
