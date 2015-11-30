@@ -34,7 +34,7 @@ public class EditorPascal extends javax.swing.JFrame {
         btnAbrirProyecto = new javax.swing.JButton();
         btnDeshacer = new javax.swing.JButton();
         btnRehacer = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnPlay = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaEdicion = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -81,7 +81,7 @@ public class EditorPascal extends javax.swing.JFrame {
 
         btnRehacer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Rehacer1.png")); // NOI18N
 
-        jButton1.setText("btnPlay");
+        btnPlay.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Play.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -100,7 +100,7 @@ public class EditorPascal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRehacer)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnPlay)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,7 +111,7 @@ public class EditorPascal extends javax.swing.JFrame {
             .addComponent(btnAbrirProyecto)
             .addComponent(btnDeshacer)
             .addComponent(btnRehacer, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(btnPlay, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         txtAreaEdicion.setColumns(20);
@@ -242,7 +242,7 @@ public class EditorPascal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNuevoProyectoActionPerformed
 
-    /**dhhfhhfhhffhfh
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -286,8 +286,8 @@ public class EditorPascal extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnNuevoArchivo;
     private javax.swing.JButton btnNuevoProyecto;
+    private javax.swing.JButton btnPlay;
     private javax.swing.JButton btnRehacer;
-    private javax.swing.JButton jButton1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
