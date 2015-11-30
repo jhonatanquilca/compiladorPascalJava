@@ -71,8 +71,21 @@ public class EditorPascal extends javax.swing.JFrame {
         setName("IDE"); // NOI18N
 
         btnNuevoArchivo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoArchivo1.png")); // NOI18N
+        btnNuevoArchivo.setText("NUEVO ARCHIVO");
+        btnNuevoArchivo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNuevoArchivo.setFocusCycleRoot(true);
+        btnNuevoArchivo.setFocusTraversalPolicyProvider(true);
+        btnNuevoArchivo.setFocusable(false);
+        btnNuevoArchivo.setHideActionText(true);
+        btnNuevoArchivo.setName(""); // NOI18N
+        btnNuevoArchivo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnNuevoArchivoMouseReleased(evt);
+            }
+        });
 
         btnNuevoProyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoProyecto1.png")); // NOI18N
+        btnNuevoProyecto.setText("NUEVO PROYECTO");
         btnNuevoProyecto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoProyectoActionPerformed(evt);
@@ -80,14 +93,19 @@ public class EditorPascal extends javax.swing.JFrame {
         });
 
         btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Guardar.png")); // NOI18N
+        btnGuardar.setText("GUARDAR");
 
         btnAbrirProyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\AbrirProyecto1.png")); // NOI18N
+        btnAbrirProyecto.setText("ABRIR PROYECTO");
 
         btnDeshacer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Deshacer1.png")); // NOI18N
+        btnDeshacer.setText("DESHACER");
 
         btnRehacer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Rehacer1.png")); // NOI18N
+        btnRehacer.setText("REHACER");
 
         btnPlay.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Play.png")); // NOI18N
+        btnPlay.setText("PLAY");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -258,6 +276,11 @@ public class EditorPascal extends javax.swing.JFrame {
     private void btnNuevoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProyectoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNuevoProyectoActionPerformed
+
+    private void btnNuevoArchivoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoArchivoMouseReleased
+        // TODO add your handling code here:
+        System.out.println("Hola");
+    }//GEN-LAST:event_btnNuevoArchivoMouseReleased
 
     /**
      * @param args the command line arguments
