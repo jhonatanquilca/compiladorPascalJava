@@ -16,6 +16,7 @@ public class CompiladorPascal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+//        https://github.com/silasgtcs/Compilador/blob/master/lexico.cpp
     }
     
 }
