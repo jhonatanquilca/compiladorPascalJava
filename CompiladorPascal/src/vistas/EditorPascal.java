@@ -86,6 +86,11 @@ public class EditorPascal extends javax.swing.JFrame {
                 btnNuevoArchivoMouseReleased(evt);
             }
         });
+        btnNuevoArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoArchivoActionPerformed(evt);
+            }
+        });
 
         btnNuevoProyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoProyecto1.png")); // NOI18N
         btnNuevoProyecto.setText("NUEVO PROYECTO");
@@ -100,6 +105,11 @@ public class EditorPascal extends javax.swing.JFrame {
 
         btnAbrirProyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\AbrirProyecto1.png")); // NOI18N
         btnAbrirProyecto.setText("ABRIR PROYECTO");
+        btnAbrirProyecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAbrirProyectoActionPerformed(evt);
+            }
+        });
 
         btnDeshacer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Deshacer1.png")); // NOI18N
         btnDeshacer.setText("DESHACER");
@@ -159,9 +169,7 @@ public class EditorPascal extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 33, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Tab1", jPanel2);
@@ -187,9 +195,7 @@ public class EditorPascal extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Lexico", jPanel3);
@@ -262,6 +268,7 @@ public class EditorPascal extends javax.swing.JFrame {
         });
         MenuArchivo.add(jMenuItem1);
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_BACK_SPACE, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\NuevoArchivo.png")); // NOI18N
         jMenuItem2.setText("Nuevo Archivo");
         MenuArchivo.add(jMenuItem2);
@@ -355,12 +362,33 @@ public class EditorPascal extends javax.swing.JFrame {
 
     private void btnNuevoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProyectoActionPerformed
         // TODO add your handling code here:
+        
+        NuevoProyecto np=new NuevoProyecto();
+        np.setVisible(true);
+        
     }//GEN-LAST:event_btnNuevoProyectoActionPerformed
 
     private void btnNuevoArchivoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoArchivoMouseReleased
         // TODO add your handling code here:
 
     }//GEN-LAST:event_btnNuevoArchivoMouseReleased
+
+    private void btnNuevoArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoArchivoActionPerformed
+        // TODO add your handling code here:
+        
+        NuevoArchivo na=new NuevoArchivo();
+        na.setVisible(true);
+        
+        
+        
+    }//GEN-LAST:event_btnNuevoArchivoActionPerformed
+
+    private void btnAbrirProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProyectoActionPerformed
+        // TODO add your handling code here:
+        
+        AbrirProyecto ap=new AbrirProyecto();
+        ap.setVisible(true);
+    }//GEN-LAST:event_btnAbrirProyectoActionPerformed
 
     /**
      * @param args the command line arguments
