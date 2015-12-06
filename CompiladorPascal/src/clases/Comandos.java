@@ -32,6 +32,7 @@ public class Comandos {
     public void setLimpiar_pantalla(String limpiar_pantalla) {
         this.limpiar_pantalla = limpiar_pantalla;
     }
+    
     //variables para manejo de carpetas
     String regresar_directorio = "cd..";
     String avanzar_directorio = "cd";
