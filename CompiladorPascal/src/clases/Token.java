@@ -24,4 +24,5 @@ public class Token {
         "operator", "or", "packed", "procedure", "program", "record", "reintroduce", "repeat", "self",
         "set", "shl", "shr", "string", "then", "to", "type", "unit", "until", "uses", "var", "while", "with", "xor"};
 
+
 }

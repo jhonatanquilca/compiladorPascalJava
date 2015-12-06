@@ -4,6 +4,10 @@ package vistas;
  *
  * @author Rubén
  */
+import clases.Token;
+import java.awt.Image;
+import java.net.URL;
+import javax.swing.ImageIcon;
 public class EditorPascal extends javax.swing.JFrame {
 
     /**
@@ -12,6 +16,9 @@ public class EditorPascal extends javax.swing.JFrame {
     public EditorPascal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("/img/epascal.png")).getImage());   
+            
+
     }
 
     /**
@@ -37,7 +44,7 @@ public class EditorPascal extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtAIngreso = new javax.swing.JTextArea();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -119,6 +126,11 @@ public class EditorPascal extends javax.swing.JFrame {
 
         btnPlay.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\Play.png")); // NOI18N
         btnPlay.setText("PLAY");
+        btnPlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -155,11 +167,11 @@ public class EditorPascal extends javax.swing.JFrame {
 
         jTabbedPane4.addTab("Proyectos", jScrollPane2);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtAIngreso.setColumns(20);
+        txtAIngreso.setLineWrap(true);
+        txtAIngreso.setRows(5);
+        txtAIngreso.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtAIngreso);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -338,7 +350,7 @@ public class EditorPascal extends javax.swing.JFrame {
                 .addGap(101, 101, 101)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+                        .addComponent(jTabbedPane1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTabbedPane4))
@@ -359,8 +371,7 @@ public class EditorPascal extends javax.swing.JFrame {
     private void btnNuevoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProyectoActionPerformed
         // TODO add your handling code here:
         
-        NuevoProyecto np=new NuevoProyecto();
-        np.setVisible(true);
+        
         
     }//GEN-LAST:event_btnNuevoProyectoActionPerformed
 
@@ -372,9 +383,9 @@ public class EditorPascal extends javax.swing.JFrame {
     private void btnNuevoArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoArchivoActionPerformed
         // TODO add your handling code here:
         
-        NuevoArchivo na=new NuevoArchivo();
-        na.setVisible(true);
+            
         
+   
         
         
     }//GEN-LAST:event_btnNuevoArchivoActionPerformed
@@ -385,6 +396,14 @@ public class EditorPascal extends javax.swing.JFrame {
         AbrirProyecto ap=new AbrirProyecto();
         ap.setVisible(true);
     }//GEN-LAST:event_btnAbrirProyectoActionPerformed
+
+    private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
+        // TODO add your handling code here:
+        
+            String texto=txtAIngreso.getText();
+   
+           
+    }//GEN-LAST:event_btnPlayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -460,11 +479,11 @@ public class EditorPascal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTree jTree1;
     private javax.swing.JMenuBar menBar;
     private javax.swing.JTable tblLexico;
     private javax.swing.JTable tblMatrizT;
+    private javax.swing.JTextArea txtAIngreso;
     private javax.swing.JTextArea txtASintactico;
     // End of variables declaration//GEN-END:variables
 }
