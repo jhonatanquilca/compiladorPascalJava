@@ -4,10 +4,12 @@ package vistas;
  *
  * @author Rubén
  */
+import clases.Comandos;
 import clases.Token;
 import java.awt.Image;
 import java.net.URL;
 import javax.swing.ImageIcon;
+
 public class EditorPascal extends javax.swing.JFrame {
 
     /**
@@ -16,9 +18,10 @@ public class EditorPascal extends javax.swing.JFrame {
     public EditorPascal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setIconImage(new ImageIcon(getClass().getResource("/img/epascal.png")).getImage());   
-            
+        this.setIconImage(new ImageIcon(getClass().getResource("/img/epascal.png")).getImage());
 
+        Comandos cmd = new Comandos();
+        System.out.println(cmd.getDirectorioActual());
     }
 
     /**
@@ -370,9 +373,8 @@ public class EditorPascal extends javax.swing.JFrame {
 
     private void btnNuevoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProyectoActionPerformed
         // TODO add your handling code here:
-        
-        
-        
+
+
     }//GEN-LAST:event_btnNuevoProyectoActionPerformed
 
     private void btnNuevoArchivoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoArchivoMouseReleased
@@ -382,27 +384,23 @@ public class EditorPascal extends javax.swing.JFrame {
 
     private void btnNuevoArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoArchivoActionPerformed
         // TODO add your handling code here:
-        
-            
-        
-   
-        
-        
+
+
     }//GEN-LAST:event_btnNuevoArchivoActionPerformed
 
     private void btnAbrirProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProyectoActionPerformed
         // TODO add your handling code here:
-        
-        AbrirProyecto ap=new AbrirProyecto();
+
+        AbrirProyecto ap = new AbrirProyecto();
         ap.setVisible(true);
     }//GEN-LAST:event_btnAbrirProyectoActionPerformed
 
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
         // TODO add your handling code here:
-        
-            String texto=txtAIngreso.getText();
-   
-           
+
+        String texto = txtAIngreso.getText();
+
+
     }//GEN-LAST:event_btnPlayActionPerformed
 
     /**

@@ -5,12 +5,8 @@
  */
 package compiladorpascal;
 
-import static java.awt.JobAttributes.DestinationType.FILE;
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.TreeMap;
+
 
 /**
  *

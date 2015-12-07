@@ -186,7 +186,7 @@ public class CaracteresBase {
         } else if (esLecturaEscritura(c)) {
             return LECTUR_ESCRITURA;
         } else if (esPalabraReservada(c)) {
-            return RESERVADO;
+            return PALABRA_RESERVADA;
         } else if (esNumero(c)) {
             return NUMERO;
         } else if (esOperadorArt(c)) {
@@ -235,7 +235,7 @@ public class CaracteresBase {
             return true;
         } else if (esEspacio(c)) {
             return true;
-        } else if (esFinal(c)) {
+        } else if (esFinPrograma(c)) {
             return true;
         } else if (esAgrupador(c)) {
             return true;
