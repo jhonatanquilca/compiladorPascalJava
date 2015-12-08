@@ -42,7 +42,7 @@ public class Token {
         String[] tokens = separateTocken();
         String[][] resp = new String[tokens.length][2];
         for (int i = 0; i < tokens.length; i++) {
-            resp[i][0] = i+"";
+            resp[i][0] = getTipoToken(sentencia);
             resp[i][1] = tokens[i];
 
         }
@@ -142,45 +142,44 @@ public class Token {
     private String getTipoToken(String token) {
         CaracteresBase cb = new CaracteresBase();
         if (cb.esPalabraReservada(token)) {
-            return "ES reservado";
+            return "RESERVADO";
         } else if (cb.esTipoDato(token)) {
-            return "ES tipo dato";
+            return "TIPO_DATO";
         } else if (cb.esLecturaEscritura(token)) {
             //write y read
-            return "ES lectura o escritura";
+            return "LECTURA_ESCRITURA";
         } else if (cb.esFinPrograma(token)) {
             //write y read
-            return "ES fin de programa";
+            return "END";
         } else if (cb.esOperadorArt(token)) {
-            return "ES opetador Aritmetico";
+            return "OPERADOR_ARITMETICO";
         } else if (Pattern.matches("[0-9]*( ||)...( ||)[0-9]*", token)) {
-            return "ES opetador subsecuense";
+            return "SUBSECUENCIA";
         } else if (cb.esOperadorBoleano(token)) {
-            return "ES opetador booleano";
+            return "OPERADOR_BOLEANO";
         } else if (cb.esAsignacion(token)) {
             //: asigancion de tipo dato
             //:= asigancion de valor a variable
             //= asigancion de valor a constante o 
-            return "ES asignacion";
+            return "ASIGNACION";
         } else if (cb.esAgrupador(token)) {
-            return "ES agrupador";
+            return "AGRUPADOR";
         } else if (token.contains("'")) {
-            return "ES texto string";
+            return "TEXTO_STRING";
         } else if (token.contains("{")) {
-            return "ES cometario";
+            return "COMENTARIO";
         } else if (cb.esInstruccionFinal(token)) {
-            return "ES instruccion final";
+            return "INSTRUCCION_FINAL";
         } else if (cb.esSeparador(token)) {
-            return "ES instruccion separador";
+            return "SEPARADOR";
         } else if (Pattern.matches("[0-9]*", token)) {
-            return "Es numero";
+            return "NUMERO";
         } else if (Pattern.matches("[a-z]([a-z]+||[A-Z]+||[0-9]+)*", token)) {
-            return "ES ID";
+            return "ID";
 
         } else {
             return "No identificado";
         }
     }
-
 
 }

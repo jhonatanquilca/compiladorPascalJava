@@ -18,7 +18,7 @@ public class EditorPascal extends javax.swing.JFrame {
     public EditorPascal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setIconImage(new ImageIcon(getClass().getResource("/img/epascal.png")).getImage());
+//        this.setIconImage(new ImageIcon(getClass().getResource("/img/epascal.png")).getImage());
 
         Comandos cmd = new Comandos();
         System.out.println(cmd.getDirectorioActual());
