@@ -6,6 +6,7 @@
 package compiladorpascal;
 
 import clases.Token;
+import clases.TokenLex;
 import java.util.Hashtable;
 
 /**
@@ -21,8 +22,8 @@ public class CompiladorPascal {
         // TODO code application logic here
 //        https://github.com/silasgtcs/Compilador/blob/master/lexico.cpp
 
-        Token tk
-                = //                new Token("program HelloWorld;\n"
+        TokenLex tk
+                = //                new TokenLex("program HelloWorld;\n"
                 //                        + "uses crt;\n"
                 //                        + "var\n"
                 //                        + "a:string;\n"
@@ -33,7 +34,7 @@ public class CompiladorPascal {
                 //                        + "   writeln('Hello World'); \n"
                 //                        + "   readkey;\n"
                 //                        + "end. ");
-                new Token("program ex2343dimarray;\n"
+                new TokenLex("program ex2343dimarray;\n"
                         + "var \n"
                         + "   a: array [0..3, 0..3] of integer;\n"
                         + "   i,j : integer;  \n"
@@ -50,11 +51,14 @@ public class CompiladorPascal {
                         + "      writeln;  \n"
                         + "   end;  \n"
                         + "end.");
-        String[][] tokens = tk.getTokenList();
+//                new TokenLex(";");
+        Token[] tokens = tk.getToken();
         for (int i = 0; i < tokens.length; i++) {
-            System.out.print(tokens[i][0]);
+            System.out.print(tokens[i].getNombre());
             System.out.print("--");
-            System.out.print(tokens[i][1]);
+            System.out.print(tokens[i].getLexema());
+            System.out.print("--");
+            System.out.print(tokens[i].geValtId(tokens[i].getNombre()));
             System.out.println("");
 
         }

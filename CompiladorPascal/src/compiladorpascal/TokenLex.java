@@ -12,7 +12,7 @@ import java.util.Hashtable;
  *
  * @author Administrador
  */
-public class Token {
+public class TokenLex {
 
     public static final int INVALID = 0;
     public static final int RESERVED = 1;

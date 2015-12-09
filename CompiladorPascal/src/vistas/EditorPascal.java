@@ -5,7 +5,7 @@ package vistas;
  * @author Rubén
  */
 import clases.Comandos;
-import clases.Token;
+import clases.TokenLex;
 import java.awt.Image;
 import java.net.URL;
 import javax.swing.ImageIcon;
