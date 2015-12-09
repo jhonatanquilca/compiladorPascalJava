@@ -179,8 +179,13 @@ public class TokenLex {
             }
 //            return "OPERADOR_ARITMETICO";
             return resp;
-        } else if (Pattern.matches("[0-9]*( ||)...( ||)[0-9]*", token)) {
+        } else if (Pattern.matches("[0-9]*( ||)...( ||)[0-9]*", token)&&!token.contains("'")) {
             return "subsecuencia";
+        } else if (cb.esAsignacion(token)) {
+            //: asigancion de tipo dato
+            //:= asigancion de valor a variable
+            //= asigancion de valor a constante o 
+            return "asignacion";
         } else if (cb.esOperadorBoleano(token)) {
             String resp = "";
 //            "<", ">", "==", "!=", ">=", "<="
@@ -200,11 +205,6 @@ public class TokenLex {
             }
             return resp;
 //            return "OPERADOR_BOLEANO";
-        } else if (cb.esAsignacion(token)) {
-            //: asigancion de tipo dato
-            //:= asigancion de valor a variable
-            //= asigancion de valor a constante o 
-            return "asignacion";
         } else if (cb.esAgrupador(token)) {
 //            "(", ")", "[", "]",
 //            "parentesis_a", "parentesis_c", "corchetes_a", "corchetes_c",
@@ -230,7 +230,7 @@ public class TokenLex {
             return "separador";
         } else if (Pattern.matches("[0-9]*||([0-9]+.[0-9]+)", token)) {
             return "numero";
-        } else if (Pattern.matches("[a-z]([a-z]+||[A-Z]+||[0-9]+)*", token)) {
+        } else if (Pattern.matches("([a-z]||[A-Z])([a-z]+||[A-Z]+||[0-9]+)*", token)) {
             return "id";
         } else {
             return "No identificado";

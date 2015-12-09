@@ -47,11 +47,12 @@ public class CaracteresBase {
     public String TEXTO = "TEXTO";
 
     //reservados del compilador
-    String[] lecturaEscritura = new String[]{"writeln", "readln","readkey","write"};
+    String[] lecturaEscritura = new String[]{"writeln", "readln", "readkey", "write"};
 
     String[] palabraReservada = new String[]{"program",
         "uses", "begin", "end", "and",
         "array", "case", "cons", "div",
+        "const",
         "do", "downto", "else", "file",
         "function", "goto", "label", "in",
         "mod", "nil", "not", "of",
@@ -84,6 +85,7 @@ public class CaracteresBase {
         "double",
         "extended",
         "char",
+        "string",
         "shortstring",
         "ansistring",
         "pchar",

@@ -20,10 +20,10 @@ public class Token {
     private String nombre;
     private int id;
 
-    String[] listaToken = new String[]{
+   public static String[] listaToken = new String[]{
         "program",
         "uses", "begin", "end", "and",
-        "array", "case", "cons", "div",
+        "array", "case", "cons","const", "div",
         "do", "downto", "else", "file",
         "function", "goto", "label", "in",
         "mod", "nil", "not", "of",
@@ -55,6 +55,7 @@ public class Token {
         "double",
         "extended",
         "char",
+        "string",
         "shortstring",
         "ansistring",
         "pchar",
