@@ -31,6 +31,7 @@ public class Token {
         "record", "repeat", "set", "then",
         "to", "type", "until", "var",
         "for",
+        "if",
         "while", "with",
         "integer",
         "real",

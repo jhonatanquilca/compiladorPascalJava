@@ -59,6 +59,7 @@ public class CaracteresBase {
         "record", "repeat", "set", "then",
         "to", "type", "until", "var",
         "for",
+        "if",
         "while", "with",};
     String[] tipoDato = new String[]{
         "integer",
