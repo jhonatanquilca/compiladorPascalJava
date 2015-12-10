@@ -1,4 +1,5 @@
 package vistas;
+
 import clases.Comandos;
 import clases.TokenLex;
 import java.awt.Desktop;
@@ -7,9 +8,11 @@ import java.io.File;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 public class EditorPascal extends javax.swing.JFrame {
+
     String time;
     String Jtreevar;
 
@@ -19,9 +22,13 @@ public class EditorPascal extends javax.swing.JFrame {
     public EditorPascal() {
         initComponents();
         this.setLocationRelativeTo(null);
-//        this.setIconImage(new ImageIcon(getClass().getResource("/img/epascal.png")).getImage());
- jsyntaxpane.DefaultSyntaxKit.initKit();
-       editar.setContentType("text/sql");
+        try {
+            this.setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
+        } catch (Exception e) {
+        }
+        
+        jsyntaxpane.DefaultSyntaxKit.initKit();
+        editar.setContentType("text/java");
         Comandos cmd = new Comandos();
         System.out.println(cmd.getDirectorioActual());
     }
@@ -422,7 +429,8 @@ public class EditorPascal extends javax.swing.JFrame {
     private void jTree1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTree1MouseClicked
         Comandos cmd = new Comandos();
         DefaultMutableTreeNode carpetaRaiz = new DefaultMutableTreeNode(cmd.getDirectorioActual());
-
+        JTree arbol = new JTree(carpetaRaiz);
+        arbol.getSelectionModel().addTreeSelectionListener(this);
 
 
     }//GEN-LAST:event_jTree1MouseClicked
