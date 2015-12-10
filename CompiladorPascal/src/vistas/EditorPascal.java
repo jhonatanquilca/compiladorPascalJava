@@ -22,10 +22,8 @@ public class EditorPascal extends javax.swing.JFrame {
     public EditorPascal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        try {
-            this.setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
-        } catch (Exception e) {
-        }
+       
+        setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
         
         jsyntaxpane.DefaultSyntaxKit.initKit();
         editar.setContentType("text/java");
@@ -430,7 +428,7 @@ public class EditorPascal extends javax.swing.JFrame {
         Comandos cmd = new Comandos();
         DefaultMutableTreeNode carpetaRaiz = new DefaultMutableTreeNode(cmd.getDirectorioActual());
         JTree arbol = new JTree(carpetaRaiz);
-        arbol.getSelectionModel().addTreeSelectionListener(this);
+//        arbol.getSelectionModel().addTreeSelectionListener(this);
 
 
     }//GEN-LAST:event_jTree1MouseClicked
