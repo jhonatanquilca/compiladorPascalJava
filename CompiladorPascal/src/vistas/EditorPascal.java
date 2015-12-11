@@ -1,7 +1,6 @@
 package vistas;
 
 import clases.Comandos;
-import clases.Token;
 import clases.TokenLex;
 import java.awt.Desktop;
 import java.awt.Image;
@@ -10,7 +9,6 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTree;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 public class EditorPascal extends javax.swing.JFrame {
@@ -24,11 +22,9 @@ public class EditorPascal extends javax.swing.JFrame {
     public EditorPascal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        try {
-            this.setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
-        } catch (Exception e) {
-        }
-
+       
+        setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
+        
         jsyntaxpane.DefaultSyntaxKit.initKit();
         editar.setContentType("text/java");
         Comandos cmd = new Comandos();
@@ -411,7 +407,7 @@ public class EditorPascal extends javax.swing.JFrame {
                 }
 
             } else {
-                JOptionPane.showMessageDialog(this, "El Archivo no existe ", "Error", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El Archivo no existe", "Error", JOptionPane.INFORMATION_MESSAGE);
 
             }
 
@@ -425,22 +421,6 @@ public class EditorPascal extends javax.swing.JFrame {
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
         // TODO add your handling code here:
 
-        String textoEditor = editar.getText();
-        if (!textoEditor.isEmpty()) {
-            TokenLex tkl = new TokenLex(textoEditor);
-            Token lista[] = tkl.getToken();
-            String tabla[][] = new String[lista.length][2];
-
-            for (int i = 0; i < lista.length; i++) {
-                tabla[i][0] = lista[i].getNombre();
-                tabla[i][1] = lista[i].getLexema();
-
-            }
-
-            DefaultTableModel modelo = new DefaultTableModel(tabla, new String[]{"TOKEN", "LEXEMA"});
-            tblLexico.setModel(modelo);
-
-        }
 
     }//GEN-LAST:event_btnPlayActionPerformed
 
