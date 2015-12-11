@@ -125,6 +125,11 @@ public class TokenLex {
     //Quita codigo inutil
 
     public String quitarbasura(String texto) {
+        texto = texto.replace("\n\n", "\n");
+        texto = texto.replace("\n\n\n", "\n");
+        texto = texto.replace("\n\n\n\n", "\n");
+        texto = texto.replace("\n\n\n\n\n", "\n");
+        texto = texto.replace("\n\n\n\n\n\n", "\n");
 //        texto = texto.replace("\n", "\\");
         texto = texto.replace("     ", " ");
         texto = texto.replace("    ", " ");
@@ -231,7 +236,11 @@ public class TokenLex {
         } else if (Pattern.matches("([a-z]||[A-Z])([a-z]+||[A-Z]+||[0-9]+||[_]+)*", token)) {
             return "id";
         } else {
+            char[] txt=token.toCharArray();
 //            return null;
+            for (char u : txt) {
+                System.out.println("---"+u+"---");
+            }
             return "No identificado";
         }
     }
