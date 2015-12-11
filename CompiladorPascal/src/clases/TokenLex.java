@@ -5,13 +5,6 @@
  */
 package clases;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.regex.Pattern;
 import java.util.regex.Pattern;
 
 /**
@@ -22,16 +15,20 @@ public class TokenLex {
 
     String sentencia = "";
 
-    public TokenLex(String ba) {
-        sentencia = ba;
+    public TokenLex(String texto) {
+        sentencia = texto;
     }
 
     public Token[] getToken() {
         String[] tokens = separateTocken();
         Token[] resp = new Token[tokens.length];
         for (int i = 0; i < tokens.length; i++) {
+//            if (!getTipoToken(tokens[i]).equals(null)) {
+
             Token t = new Token(tokens[i], getTipoToken(tokens[i]));
             resp[i] = t;
+//            }
+
         }
 
         return resp;
@@ -53,8 +50,9 @@ public class TokenLex {
         CaracteresBase leng = new CaracteresBase();
         String aux = "";
         boolean foco = true;
-//        sentencia = sentencia.replace("\n", "~");
+
         sentencia = sentencia.replace("\n", " ");
+        sentencia = quitarbasura(sentencia);
         for (int i = 0; i < sentencia.length(); i++) {
             String caracterActual = sentencia.charAt(i) + "";
             String tipoAct = leng.getTipo(caracterActual);
@@ -179,7 +177,7 @@ public class TokenLex {
             }
 //            return "OPERADOR_ARITMETICO";
             return resp;
-        } else if (Pattern.matches("[0-9]*( ||)...( ||)[0-9]*", token)&&!token.contains("'")) {
+        } else if (Pattern.matches("[0-9]*( ||)...( ||)[0-9]*", token) && !token.contains("'")) {
             return "subsecuencia";
         } else if (cb.esAsignacion(token)) {
             //: asigancion de tipo dato
@@ -230,9 +228,10 @@ public class TokenLex {
             return "separador";
         } else if (Pattern.matches("[0-9]*||([0-9]+.[0-9]+)", token)) {
             return "numero";
-        } else if (Pattern.matches("([a-z]||[A-Z])([a-z]+||[A-Z]+||[0-9]+)*", token)) {
+        } else if (Pattern.matches("([a-z]||[A-Z])([a-z]+||[A-Z]+||[0-9]+||[_]+)*", token)) {
             return "id";
         } else {
+//            return null;
             return "No identificado";
         }
     }
