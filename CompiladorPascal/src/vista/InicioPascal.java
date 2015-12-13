@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vistas;
+package vista;
 
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import vistas.EditorPascal;
+import vista.EditorPascal;
 
 /**
  *
