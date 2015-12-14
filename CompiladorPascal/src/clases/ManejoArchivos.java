@@ -18,28 +18,40 @@ public class ManejoArchivos {
     FileInputStream entrada;
     FileOutputStream salida;
     File archivo;
+//    FileWriter w;
+//    BufferedWriter bw;
+//    PrintWriter wr;
 
     public ManejoArchivos() {
 
     }
 
     //Crear 
-    public String CrearTexto(File archivo) {
-        String contenido = null;
-
-        try {
-            archivo = new File("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\nuevito.txt");
-            if (archivo.createNewFile()) {
-                System.out.println("Se ha creado el archivo");
-            }
-                                  
-        } catch (IOException e) {
-            System.err.println("No se ha podido crear el archivo");
-        }
-
-        return contenido;
-
-    }
+//    public void CrearTexto(String nombre) {
+//       
+//        try {
+//
+//            archivo = new File(nombre);
+//            w = new FileWriter(archivo);
+//
+//            bw = new BufferedWriter(w);
+//            wr = new PrintWriter(bw);
+//
+//            wr.write("Linea 1");
+//            wr.append("\nSegunda linea de codigo");
+//            wr.append("\nLinea final");
+//
+//            wr.close();
+//            bw.close();
+//
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, "Ha sucedido un error" + e);
+//
+//        }
+//
+//      
+//
+//    }
 
     //Abrir 
     public String AbrirTexto(File archivo) {

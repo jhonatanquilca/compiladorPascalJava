@@ -1,4 +1,4 @@
-package vista;
+package vistas;
 
 import clases.ManejoArchivos;
 import java.awt.Desktop;
@@ -67,7 +67,7 @@ public class Editor extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        archivonuevo.setText("archivonuevo");
+        archivonuevo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\fileadd.png")); // NOI18N
         archivonuevo.setToolTipText("Archivo Nuevo");
         archivonuevo.setFocusable(false);
         archivonuevo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -77,16 +77,21 @@ public class Editor extends javax.swing.JFrame {
                 archivonuevoComponentRemoved(evt);
             }
         });
+        archivonuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                archivonuevoActionPerformed(evt);
+            }
+        });
         jToolBar1.add(archivonuevo);
 
-        proyectonuevo.setText("proyectonuevo");
+        proyectonuevo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\nproyect.png")); // NOI18N
         proyectonuevo.setToolTipText("Proyecto Nuevo");
         proyectonuevo.setFocusable(false);
         proyectonuevo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         proyectonuevo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(proyectonuevo);
 
-        abrirproyecto.setText("abrirproyecto");
+        abrirproyecto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\fopen.png")); // NOI18N
         abrirproyecto.setToolTipText("Abrir Proyecto");
         abrirproyecto.setFocusable(false);
         abrirproyecto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -225,7 +230,7 @@ public class Editor extends javax.swing.JFrame {
                 .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 603, Short.MAX_VALUE))
+                .addGap(0, 729, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panelarbol)
@@ -240,7 +245,7 @@ public class Editor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jToolBar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToolBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jToolBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jToolBar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jToolBar3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -249,7 +254,7 @@ public class Editor extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(paneleditar, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelsalidas, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)))
+                        .addComponent(panelsalidas, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -327,6 +332,13 @@ public class Editor extends javax.swing.JFrame {
     private void archivonuevoComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_archivonuevoComponentRemoved
         // TODO add your handling code here:
     }//GEN-LAST:event_archivonuevoComponentRemoved
+
+    private void archivonuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivonuevoActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_archivonuevoActionPerformed
 
     /**
      * @param args the command line arguments

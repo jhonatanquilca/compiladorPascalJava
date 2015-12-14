@@ -57,7 +57,7 @@
               <Component id="jToolBar3" min="-2" pref="177" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="jToolBar4" min="-2" pref="116" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="603" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="729" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
@@ -76,7 +76,7 @@
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="jToolBar4" max="32767" attributes="0"/>
-                  <Component id="jToolBar1" alignment="0" pref="32" max="32767" attributes="0"/>
+                  <Component id="jToolBar1" alignment="0" max="32767" attributes="0"/>
                   <Component id="jToolBar2" alignment="0" max="32767" attributes="0"/>
                   <Component id="jToolBar3" alignment="0" max="32767" attributes="0"/>
               </Group>
@@ -86,7 +86,7 @@
                   <Group type="102" attributes="0">
                       <Component id="paneleditar" min="-2" pref="548" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panelsalidas" pref="161" max="32767" attributes="0"/>
+                      <Component id="panelsalidas" pref="153" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -104,7 +104,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="archivonuevo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="archivonuevo"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Rub&#xe9;n\Documents\NetBeansProjects\compiladorPascalJava\CompiladorPascal\src\img\fileadd.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Archivo Nuevo"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -112,11 +114,14 @@
           </Properties>
           <Events>
             <EventHandler event="componentRemoved" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="archivonuevoComponentRemoved"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="archivonuevoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="proyectonuevo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="proyectonuevo"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Rub&#xe9;n\Documents\NetBeansProjects\compiladorPascalJava\CompiladorPascal\src\img\nproyect.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Proyecto Nuevo"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -125,7 +130,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="abrirproyecto">
           <Properties>
-            <Property name="text" type="java.lang.String" value="abrirproyecto"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Rub&#xe9;n\Documents\NetBeansProjects\compiladorPascalJava\CompiladorPascal\src\img\fopen.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Abrir Proyecto"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
