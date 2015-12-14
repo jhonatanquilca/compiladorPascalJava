@@ -51,7 +51,7 @@ public class CaracteresBase {
 
     String[] palabraReservada = new String[]{"program",
         "uses", "begin", "end", "and",
-        "array", "case", "cons", "div",
+        "array", "case", "cons",
         "const",
         "do", "downto", "else", "file",
         "function", "goto", "label", "in",

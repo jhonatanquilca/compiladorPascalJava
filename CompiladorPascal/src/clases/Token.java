@@ -23,10 +23,10 @@ public class Token {
     public static String[] listaToken = new String[]{
         "program",
         "uses", "begin", "end", "and",
-        "array", "case", "cons", "const", "div",
+        "array", "case", "cons", "const",
         "do", "downto", "else", "file",
         "function", "goto", "label", "in",
-        "mod", "nil", "not", "of",
+         "nil", "not", "of",
         "or", "paked", "procedure", "program",
         "record", "repeat", "set", "then",
         "to", "type", "until", "var",
@@ -41,14 +41,10 @@ public class Token {
         "bolean",
         "enumerated",
         "subrange",
-        "array",
-        "record",
         "fail",
-        "set",
         "byte",
         "shorint",
         "word",
-        "longint",
         "longint",
         "cardinal",
         "int64",
@@ -66,8 +62,7 @@ public class Token {
         "longboll",
         "writeln", "readln", "readkey", "write",
         "punto",
-        "suma", "resta", "multiplicacino", "division", "modulo",
-        "subsecuencia",
+        "suma", "resta", "multiplicacino", "mod", "div",//op_art      
         "menor", "mayor", "igual", "diferente", "mayor_igual", "menor_igual",
         "asignacion",
         "parentesis_a", "parentesis_c", "corchetes_a", "corchetes_c",
@@ -115,7 +110,7 @@ public class Token {
         for (int i = 0; i < listaToken.length; i++) {
             String listaToken1 = listaToken[i];
             if (listaToken1.equals(c)) {
-                val = i;
+                val = i + 1;
 //                if(c.equals("fin_linea")){
 //                    System.out.println("pc");
 //                }

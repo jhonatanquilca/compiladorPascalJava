@@ -67,6 +67,8 @@ public class TokenLex {
                 aux += "§" + caracterActual;
             } else if (tipoAct.equals(leng.OPERADORES_BOLEANOS) && tipoAnt.equals(leng.OPERADORES_BOLEANOS)) {//para operadores bolenados juntos
                 aux += caracterActual;
+            } else if (tipoAct.equals(leng.ASIGNACION) && tipoAnt.equals(leng.OPERADORES_BOLEANOS)) {//para operadores bolenados juntos
+                aux += caracterActual;
             } else if (tipoAct.equals(leng.OPERADORES_BOLEANOS) && tipoAnt.equals(leng.ASIGNACION)) {//para operadores bolenados juntos
                 aux += caracterActual;
             } else if (tipoAct.equals(tipoAnt)) {//identifica caracteres de un mismo tipos
@@ -160,7 +162,11 @@ public class TokenLex {
         texto = texto.replace("   ", " ");
         texto = texto.replace("  ", " ");
         texto = texto.replace(" ", " ");
-//        texto = texto.replace("\\ ", "\\");
+
+        if (texto.charAt(0) == ' ') {
+
+            texto = texto.substring(1, texto.length());
+        }
 
         return texto;
     }
@@ -200,16 +206,16 @@ public class TokenLex {
             } else if (token.equals("*")) {
                 resp = "multiplicacino";
             } else if (token.equals("div") || token.equals("/")) {
-                resp = "division";
+                resp = "div";
             } else if (token.equals("mod")) {
-                resp = "modulo";
+                resp = "mod";
             }
 //            return "OPERADOR_ARITMETICO";
             return resp;
         } else if (Pattern.matches("[0-9]*||([0-9]+.[0-9]+)", token)) {
             return "numero";
         } else if (Pattern.matches("[0-9]+( ||)...( ||)[0-9]+", token) && !token.contains("'")) {
-            return "subsecuencia";
+            return "subrange";
         } else if (cb.esAsignacion(token)) {
             //: asigancion de tipo dato
             //:= asigancion de valor a variable
@@ -251,7 +257,7 @@ public class TokenLex {
 //            return "AGRUPADOR";
         } else if (token.contains("'")) {
             return "texto_string";
-        } else if (token.contains("{")||token.contains("(*")) {
+        } else if (token.contains("{") || token.contains("(*")) {
             return "comentario";
         } else if (cb.esInstruccionFinal(token)) {
             return "fin_linea";
