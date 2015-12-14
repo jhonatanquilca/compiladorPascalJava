@@ -337,10 +337,24 @@ public class Editor extends javax.swing.JFrame {
 
     private void archivonuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivonuevoActionPerformed
         // TODO add your handling code here:
-        
-        
-        
-      
+        String texto = "Nuevo Archivo";
+        JFileChooser fc = new JFileChooser();
+        fc.setDialogTitle("Nuevo Archivo");
+        int option = fc.showSaveDialog(fc);
+        if (JFileChooser.APPROVE_OPTION == option) {
+            try {
+                BufferedWriter out = null;
+                File tmpFile = new File(fc.getSelectedFile() + "");
+                tmpFile.createNewFile();
+                out = new BufferedWriter(new FileWriter(tmpFile));
+                out.write(texto, 0, texto.length());
+                editar.setText(texto);
+                out.close();
+               
+            } catch (Exception e) {
+            }
+
+        }
 
 
     }//GEN-LAST:event_archivonuevoActionPerformed

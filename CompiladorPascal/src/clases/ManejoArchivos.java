@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.*;
 import java.io.File;
 import java.io.FileWriter;
+import vistas.Editor;
 
 /**
  *
@@ -28,18 +29,10 @@ public class ManejoArchivos {
 
     }
 
-    //Crear 
-    public void CrearArchivo(File archivo) {
-        
-        try {
-             archivo=new File ("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\archivo.txt");
-             if (archivo.createNewFile()) {
-                 System.out.println("reado");
-            }
-        } catch (Exception e) {
-            System.out.println("no creado");
-        }
-    }
+    //Crear
+    
+    
+   
 
     
         
