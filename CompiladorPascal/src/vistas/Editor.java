@@ -13,14 +13,15 @@ import java.io.FileWriter;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Editor extends javax.swing.JFrame {
-
+    
     JFileChooser seleccionado = new JFileChooser();
     File archivo;
 //    byte[] bytes;
     ManejoArchivos manejo = new ManejoArchivos();
-
+    
     public Editor() {
         initComponents();
         setLocationRelativeTo(null);
@@ -28,7 +29,7 @@ public class Editor extends javax.swing.JFrame {
 //        Imagen Jframe
         setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -269,7 +270,7 @@ public class Editor extends javax.swing.JFrame {
     private void jTree1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTree1MouseClicked
         // TODO add your handling code here:
         Jtreevar = jTree1.getSelectionPath().toString().replaceAll("[\\[\\]]", "").replace(", ", "\\");
-
+        
 
     }//GEN-LAST:event_jTree1MouseClicked
 
@@ -278,7 +279,7 @@ public class Editor extends javax.swing.JFrame {
 
         if (seleccionado.showDialog(this, "Abrir Archivo") == JFileChooser.APPROVE_OPTION) {
             archivo = seleccionado.getSelectedFile();
-
+            
             if (archivo.canRead()) {
                 if (archivo.getName().endsWith("txt") || archivo.getName().endsWith("java")) {
                     String contenido = manejo.AbrirTexto(archivo);
@@ -322,12 +323,12 @@ public class Editor extends javax.swing.JFrame {
                 } else {
                     JOptionPane.showMessageDialog(null, "Error al guardar");
                 }
-
+                
             } else {
                 JOptionPane.showMessageDialog(null, "El texto se debe guardar en un formato de texto");
-
+                
             }
-
+            
         }
     }//GEN-LAST:event_guardartodoActionPerformed
 
@@ -337,25 +338,39 @@ public class Editor extends javax.swing.JFrame {
 
     private void archivonuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivonuevoActionPerformed
         // TODO add your handling code here:
-        String texto = "Nuevo Archivo";
-        JFileChooser fc = new JFileChooser();
-        fc.setDialogTitle("Nuevo Archivo");
-        int option = fc.showSaveDialog(fc);
-        if (JFileChooser.APPROVE_OPTION == option) {
-            try {
-                BufferedWriter out = null;
-                File tmpFile = new File(fc.getSelectedFile() + "");
-                tmpFile.createNewFile();
-                out = new BufferedWriter(new FileWriter(tmpFile));
-                out.write(texto, 0, texto.length());
-                editar.setText(texto);
-                out.close();
+//        String texto = "Si funciona ve";
+//        JFileChooser fc = new JFileChooser();
+//        fc.setDialogTitle("Nuevo Archivo");
+//        FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT", "txt");
+//        int option = fc.showSaveDialog(fc);
+//        if (JFileChooser.APPROVE_OPTION == option) {
+//            try {
+//               
+//                
+//                BufferedWriter out = null;
+//                File tmpFile = new File(fc.getSelectedFile() + "");
+//                tmpFile.createNewFile();
+//                out = new BufferedWriter(new FileWriter(tmpFile));
+//                out.write(texto, 0, texto.length());
+//                editar.setText(texto);
+//                out.close();
+//
+//            } catch (Exception e) {
+//            }
+//
+//        }
 
+        File file = new File(JOptionPane.showInputDialog("NOMBRE ARCHIVO"));
+        String mensaje="/* PASCAL IDE 1.0 ";
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+                editar.setText(mensaje);
+                
             } catch (Exception e) {
             }
-
         }
-
+        
 
     }//GEN-LAST:event_archivonuevoActionPerformed
 
