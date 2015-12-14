@@ -6,10 +6,13 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
 import javax.swing.ImageIcon;
-
 import java.io.*;
 import javax.swing.JOptionPane;
 import javax.swing.*;
+import java.io.FileWriter;
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Editor extends javax.swing.JFrame {
 
@@ -277,7 +280,7 @@ public class Editor extends javax.swing.JFrame {
             archivo = seleccionado.getSelectedFile();
 
             if (archivo.canRead()) {
-                if (archivo.getName().endsWith("txt")||archivo.getName().endsWith("java")) {
+                if (archivo.getName().endsWith("txt") || archivo.getName().endsWith("java")) {
                     String contenido = manejo.AbrirTexto(archivo);
                     editar.setText(contenido);
                 }
@@ -311,20 +314,19 @@ public class Editor extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (seleccionado.showDialog(this, "Guardar Archivo") == JFileChooser.APPROVE_OPTION) {
             archivo = seleccionado.getSelectedFile();
-            if (archivo.getName().endsWith("txt")||archivo.getName().endsWith("java")) {                
-                String contenido=editar.getText();                
-                String respuesta = manejo.GuardarTexto(archivo, contenido);                
+            if (archivo.getName().endsWith("txt") || archivo.getName().endsWith("java")) {
+                String contenido = editar.getText();
+                String respuesta = manejo.GuardarTexto(archivo, contenido);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
                 } else {
                     JOptionPane.showMessageDialog(null, "Error al guardar");
                 }
 
-            }else {
-                 JOptionPane.showMessageDialog(null, "El texto se debe guardar en un formato de texto");
-            
+            } else {
+                JOptionPane.showMessageDialog(null, "El texto se debe guardar en un formato de texto");
+
             }
-            
 
         }
     }//GEN-LAST:event_guardartodoActionPerformed
@@ -338,6 +340,9 @@ public class Editor extends javax.swing.JFrame {
         
         
         
+      
+
+
     }//GEN-LAST:event_archivonuevoActionPerformed
 
     /**

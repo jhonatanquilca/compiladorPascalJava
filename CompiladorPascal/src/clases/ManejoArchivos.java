@@ -8,6 +8,8 @@ package clases;
 import java.io.*;
 import javax.swing.JOptionPane;
 import javax.swing.*;
+import java.io.File;
+import java.io.FileWriter;
 
 /**
  *
@@ -27,31 +29,20 @@ public class ManejoArchivos {
     }
 
     //Crear 
-//    public void CrearTexto(String nombre) {
-//       
-//        try {
-//
-//            archivo = new File(nombre);
-//            w = new FileWriter(archivo);
-//
-//            bw = new BufferedWriter(w);
-//            wr = new PrintWriter(bw);
-//
-//            wr.write("Linea 1");
-//            wr.append("\nSegunda linea de codigo");
-//            wr.append("\nLinea final");
-//
-//            wr.close();
-//            bw.close();
-//
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, "Ha sucedido un error" + e);
-//
-//        }
-//
-//      
-//
-//    }
+    public void CrearArchivo(File archivo) {
+        
+        try {
+             archivo=new File ("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\archivo.txt");
+             if (archivo.createNewFile()) {
+                 System.out.println("reado");
+            }
+        } catch (Exception e) {
+            System.out.println("no creado");
+        }
+    }
+
+    
+        
 
     //Abrir 
     public String AbrirTexto(File archivo) {

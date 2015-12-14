@@ -8,7 +8,6 @@ package vistas;
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import vistas.EditorPascal;
 
 /**
  *
@@ -107,7 +106,7 @@ public class InicioPascal extends javax.swing.JFrame {
                         case 50:
                             texto.setText("Carga finalizada");
 
-                            EditorPascal objeto = new EditorPascal();
+                            Editor objeto = new Editor();
                             objeto.setVisible(true);
                             objeto.setLocationRelativeTo(InicioPascal.this);
                             InicioPascal.this.dispose();
