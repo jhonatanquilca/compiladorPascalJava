@@ -6,6 +6,7 @@
 package vistas;
 
 import java.awt.Color;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -119,6 +120,8 @@ public class InicioPascal extends javax.swing.JFrame {
                 }
 
             } catch (InterruptedException ex) {
+                Logger.getLogger(InicioPascal.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(InicioPascal.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
