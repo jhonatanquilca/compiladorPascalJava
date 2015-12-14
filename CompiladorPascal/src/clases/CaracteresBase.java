@@ -59,6 +59,7 @@ public class CaracteresBase {
         "or", "paked", "procedure", "program",
         "record", "repeat", "set", "then",
         "to", "type", "until", "var",
+        "output", "input",
         "for",
         "if",
         "while", "with",};

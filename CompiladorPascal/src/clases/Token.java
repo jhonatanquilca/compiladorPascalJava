@@ -20,16 +20,18 @@ public class Token {
     private String nombre;
     private int id;
 
-   public static String[] listaToken = new String[]{
+    public static String[] listaToken = new String[]{
         "program",
         "uses", "begin", "end", "and",
-        "array", "case", "cons","const", "div",
+        "array", "case", "cons", "const", "div",
         "do", "downto", "else", "file",
         "function", "goto", "label", "in",
         "mod", "nil", "not", "of",
         "or", "paked", "procedure", "program",
         "record", "repeat", "set", "then",
         "to", "type", "until", "var",
+        "output",
+        "input",
         "for",
         "if",
         "while", "with",
@@ -78,11 +80,13 @@ public class Token {
     };
 
     public Token(String l, String n) {
-        this.lexema = l;
         this.nombre = n;
+        this.lexema = l;
         if (this.esEsToken(l)) {
             this.id = geValtId(n);
 
+        } else if (this.esEsToken(n)) {
+            this.id = geValtId(n);
         } else {
             id = -1;
         }

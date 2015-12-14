@@ -65,6 +65,10 @@ public class TokenLex {
 //                System.out.println(sentencia.charAt(i - 1));
             } else if (tipoAct.equals(leng.SEPARADOR)) {//identifica caracteres de un mismo tipos
                 aux += "§" + caracterActual;
+            } else if (tipoAct.equals(leng.OPERADORES_BOLEANOS) && tipoAnt.equals(leng.OPERADORES_BOLEANOS)) {//para operadores bolenados juntos
+                aux += caracterActual;
+            } else if (tipoAct.equals(leng.OPERADORES_BOLEANOS) && tipoAnt.equals(leng.ASIGNACION)) {//para operadores bolenados juntos
+                aux += caracterActual;
             } else if (tipoAct.equals(tipoAnt)) {//identifica caracteres de un mismo tipos
                 aux += caracterActual;
             } else if (tipoAct.equals(leng.ASIGNACION) && tipoAnt.equals(leng.ASIGNACION)) {//paranumeros decimales
@@ -101,6 +105,26 @@ public class TokenLex {
                     String tmpx = sentencia.charAt(j) + "";
 //                    System.out.println(tmpx.equals("}")+" "+tmpx);
                     if (tmpx.equals("}")) {
+
+                        aux += tmpx;
+                        x = false;
+                        break;
+                    } else {
+                        aux += tmpx;
+//break;
+                    }
+                    j++;
+                }
+                i = j;
+
+            } else if (caracterActual.equals("(") && sentencia.charAt(i + 1) == '*') {//paranumeros cometario
+                aux += "§" + caracterActual;
+                int j = i + 1;
+                boolean x = true;
+                while (x) {
+                    String tmpx = sentencia.charAt(j) + "";
+//                    System.out.println(tmpx.equals("}")+" "+tmpx);
+                    if (tmpx.equals(")")) {
 
                         aux += tmpx;
                         x = false;
@@ -182,7 +206,9 @@ public class TokenLex {
             }
 //            return "OPERADOR_ARITMETICO";
             return resp;
-        } else if (Pattern.matches("[0-9]*( ||)...( ||)[0-9]*", token) && !token.contains("'")) {
+        } else if (Pattern.matches("[0-9]*||([0-9]+.[0-9]+)", token)) {
+            return "numero";
+        } else if (Pattern.matches("[0-9]+( ||)...( ||)[0-9]+", token) && !token.contains("'")) {
             return "subsecuencia";
         } else if (cb.esAsignacion(token)) {
             //: asigancion de tipo dato
@@ -225,21 +251,20 @@ public class TokenLex {
 //            return "AGRUPADOR";
         } else if (token.contains("'")) {
             return "texto_string";
-        } else if (token.contains("{")) {
+        } else if (token.contains("{")||token.contains("(*")) {
             return "comentario";
         } else if (cb.esInstruccionFinal(token)) {
             return "fin_linea";
         } else if (cb.esSeparador(token)) {
             return "separador";
-        } else if (Pattern.matches("[0-9]*||([0-9]+.[0-9]+)", token)) {
-            return "numero";
+
         } else if (Pattern.matches("([a-z]||[A-Z])([a-z]+||[A-Z]+||[0-9]+||[_]+)*", token)) {
             return "id";
         } else {
-            char[] txt=token.toCharArray();
+            char[] txt = token.toCharArray();
 //            return null;
             for (char u : txt) {
-                System.out.println("---"+u+"---");
+                System.out.println("---" + u + "---");
             }
             return "No identificado";
         }
