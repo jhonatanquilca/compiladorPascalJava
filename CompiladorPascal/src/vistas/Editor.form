@@ -52,19 +52,19 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jToolBar1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jToolBar2" min="-2" pref="170" max="-2" attributes="0"/>
+              <Component id="jToolBar2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jToolBar3" min="-2" pref="177" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="jToolBar4" min="-2" pref="116" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="729" max="32767" attributes="0"/>
+              <Component id="jToolBar3" min="-2" pref="99" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jToolBar4" min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="panelarbol" max="32767" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="paneleditar" pref="1152" max="32767" attributes="0"/>
+              <Component id="panelarbol" min="-2" pref="214" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="paneleditar" pref="1169" max="32767" attributes="0"/>
                   <Component id="panelsalidas" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -86,7 +86,7 @@
                   <Group type="102" attributes="0">
                       <Component id="paneleditar" min="-2" pref="548" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panelsalidas" pref="153" max="32767" attributes="0"/>
+                      <Component id="panelsalidas" pref="147" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -105,7 +105,7 @@
         <Component class="javax.swing.JButton" name="archivonuevo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Rub&#xe9;n\Documents\NetBeansProjects\compiladorPascalJava\CompiladorPascal\src\img\fileadd.png"/>
+              <Image iconType="3" name="/img/new.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Archivo Nuevo"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -144,7 +144,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="guardartodo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="guardartodo"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/save.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Guardar Todo"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -165,7 +167,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="cortar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="cortar"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/scissors.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Cortar"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -174,7 +178,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="copiar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="copiar"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/copy.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Copiar"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -183,7 +189,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="pegar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="pegar"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/paste.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Pegar"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -201,7 +209,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="deshacer">
           <Properties>
-            <Property name="text" type="java.lang.String" value="deshacer"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/deshacer.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Deshacer"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -210,7 +220,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="rehacer">
           <Properties>
-            <Property name="text" type="java.lang.String" value="rehacer"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/rehacer.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Rehacer"/>
           </Properties>
         </Component>
@@ -225,7 +237,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="compilar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="compilar"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/ejecutar.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value="Compilar"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -257,7 +271,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTree1MouseClicked"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTree1.setModel(new FileSystemModel(new File(&quot;C:\\Users\\Rub&#xe9;n\\Documents\\NetBeansProjects&quot;)));"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTree1.setModel(new FileSystemModel(new File(&quot;C:\\Users\\Rub&#xe9;n\\Documents\\NetBeansProjects\\compiladorPascalJava&quot;)));"/>
               </AuxValues>
             </Component>
           </SubComponents>

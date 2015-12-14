@@ -26,7 +26,7 @@ public class Editor extends javax.swing.JFrame {
         setLocationRelativeTo(null);
 
 //        Imagen Jframe
-//        setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/img/pascal.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -70,7 +70,7 @@ public class Editor extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        archivonuevo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava\\CompiladorPascal\\src\\img\\fileadd.png")); // NOI18N
+        archivonuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/new.png"))); // NOI18N
         archivonuevo.setToolTipText("Archivo Nuevo");
         archivonuevo.setFocusable(false);
         archivonuevo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -106,7 +106,7 @@ public class Editor extends javax.swing.JFrame {
         });
         jToolBar1.add(abrirproyecto);
 
-        guardartodo.setText("guardartodo");
+        guardartodo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/save.png"))); // NOI18N
         guardartodo.setToolTipText("Guardar Todo");
         guardartodo.setFocusable(false);
         guardartodo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -120,21 +120,21 @@ public class Editor extends javax.swing.JFrame {
 
         jToolBar2.setRollover(true);
 
-        cortar.setText("cortar");
+        cortar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/scissors.png"))); // NOI18N
         cortar.setToolTipText("Cortar");
         cortar.setFocusable(false);
         cortar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cortar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(cortar);
 
-        copiar.setText("copiar");
+        copiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/copy.png"))); // NOI18N
         copiar.setToolTipText("Copiar");
         copiar.setFocusable(false);
         copiar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         copiar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(copiar);
 
-        pegar.setText("pegar");
+        pegar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/paste.png"))); // NOI18N
         pegar.setToolTipText("Pegar");
         pegar.setFocusable(false);
         pegar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -143,27 +143,27 @@ public class Editor extends javax.swing.JFrame {
 
         jToolBar3.setRollover(true);
 
-        deshacer.setText("deshacer");
+        deshacer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/deshacer.png"))); // NOI18N
         deshacer.setToolTipText("Deshacer");
         deshacer.setFocusable(false);
         deshacer.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         deshacer.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar3.add(deshacer);
 
-        rehacer.setText("rehacer");
+        rehacer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/rehacer.png"))); // NOI18N
         rehacer.setToolTipText("Rehacer");
         jToolBar3.add(rehacer);
 
         jToolBar4.setRollover(true);
 
-        compilar.setText("compilar");
+        compilar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ejecutar.png"))); // NOI18N
         compilar.setToolTipText("Compilar");
         compilar.setFocusable(false);
         compilar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         compilar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar4.add(compilar);
 
-        jTree1.setModel(new FileSystemModel(new File("C:\\Users\\Rubén\\Documents\\NetBeansProjects")));
+        jTree1.setModel(new FileSystemModel(new File("C:\\Users\\Rubén\\Documents\\NetBeansProjects\\compiladorPascalJava")));
         jTree1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTree1MouseClicked(evt);
@@ -228,18 +228,18 @@ public class Editor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 729, Short.MAX_VALUE))
+                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelarbol)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(paneleditar, javax.swing.GroupLayout.DEFAULT_SIZE, 1152, Short.MAX_VALUE)
+                .addComponent(panelarbol, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(paneleditar, javax.swing.GroupLayout.DEFAULT_SIZE, 1169, Short.MAX_VALUE)
                     .addComponent(panelsalidas))
                 .addContainerGap())
         );
@@ -257,7 +257,7 @@ public class Editor extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(paneleditar, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelsalidas, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)))
+                        .addComponent(panelsalidas, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -350,7 +350,7 @@ public class Editor extends javax.swing.JFrame {
                 out.write(texto, 0, texto.length());
                 editar.setText(texto);
                 out.close();
-               
+
             } catch (Exception e) {
             }
 
