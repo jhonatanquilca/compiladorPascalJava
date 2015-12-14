@@ -33,20 +33,13 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JProgressBar" name="barra">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pascal es un lenguaje de programaci&#xf3;n desarrollado por el profesor suizo Niklaus Wirth entre los a&#xf1;os 1968 y 1969."/>
+        <Property name="stringPainted" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="430" width="700" height="60"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="progreso">
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="400" width="840" height="-1"/>
+          <AbsoluteConstraints x="0" y="400" width="840" height="20"/>
         </Constraint>
       </Constraints>
     </Component>

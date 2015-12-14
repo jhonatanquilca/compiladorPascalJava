@@ -38,8 +38,7 @@ public class InicioPascal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        progreso = new javax.swing.JProgressBar();
+        barra = new javax.swing.JProgressBar();
         texto = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -54,9 +53,8 @@ public class InicioPascal extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("Pascal es un lenguaje de programación desarrollado por el profesor suizo Niklaus Wirth entre los años 1968 y 1969.");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 700, 60));
-        getContentPane().add(progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 840, -1));
+        barra.setStringPainted(true);
+        getContentPane().add(barra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 840, 20));
 
         texto.setFont(new java.awt.Font("Futura BdCn BT", 1, 10)); // NOI18N
         getContentPane().add(texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 840, 20));
@@ -72,17 +70,19 @@ public class InicioPascal extends javax.swing.JFrame {
 
         if (realizado == false) {
             realizado = true;
-            progreso.setMaximum(49);
-            progreso.setMaximum(0);
-            progreso.setStringPainted(true);
             ejecutar.start();
+            barra.setMaximum(49);
+            barra.setMinimum(0);
+            barra.setStringPainted(true);
 
         }
 
     }//GEN-LAST:event_formWindowActivated
 
     private int aux = 0;
+
     hilo ejecutar = new hilo();
+
     private boolean realizado = false;
 
     private class hilo extends Thread {
@@ -92,7 +92,9 @@ public class InicioPascal extends javax.swing.JFrame {
             try {
                 while (true) {
                     aux++;
-                    progreso.setValue(aux);
+
+                    barra.setValue(aux);
+
                     repaint();
                     switch (aux) {
                         case 0:
@@ -110,7 +112,6 @@ public class InicioPascal extends javax.swing.JFrame {
                             objeto.setVisible(true);
                             objeto.setLocationRelativeTo(InicioPascal.this);
                             InicioPascal.this.dispose();
-
                             break;
 
                     }
@@ -159,9 +160,8 @@ public class InicioPascal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar barra;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JProgressBar progreso;
     private javax.swing.JLabel texto;
     // End of variables declaration//GEN-END:variables
 }
